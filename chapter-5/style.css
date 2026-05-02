@@ -1,0 +1,35 @@
+
+body {
+    background: #0a0a0a; 
+    color: #d4af37; 
+    font-family: 'Times New Roman', serif; 
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.player {
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9); 
+}
+
+video {
+    width: 100%;
+    display: block;
+    outline: none;
+    border: 1px solid #222; 
+
+h1 {
+    font-weight: 300;
+    letter-spacing: 5px; 
+    margin-bottom: 20px;
+}
+
+p {
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
