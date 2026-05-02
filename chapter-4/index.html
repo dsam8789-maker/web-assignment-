@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digi Fest 2022</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: sans-serif; line-height: 1.5; }
+        
+        /* Header Area */
+        header { background: #1a0a25; color: white; text-align: center; padding: 30px 0; }
+        h1 { font-size: 3rem; border-bottom: 4px solid white; display: inline-block; margin-bottom: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.2rem; }
+
+        /* Main Content */
+        .container { display: flex; max-width: 1200px; margin: auto; }
+        .welcome { flex: 2; padding: 40px; }
+        .welcome h2 { font-size: 2rem; border-bottom: 3px solid black; display: inline-block; margin-bottom: 20px; }
+        .main-img { width: 100%; height: auto; margin-top: 20px; filter: contrast(1.1); }
+
+        /* Sidebar */
+        aside { flex: 1; background: #1a2c5a; color: white; padding: 40px 20px; }
+        aside h2 { border-bottom: 3px solid white; display: inline-block; margin-bottom: 20px; }
+        ul { list-style: none; color: #a0a8b0; margin-bottom: 30px; }
+        
+        /* Uniform Images Logic */
+        .img-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+        .img-grid img { 
+            width: calc(50% - 5px); 
+            height: 100px; 
+            object-fit: cover; /* Forces same height/width without stretching */
+        }
+
+        /* Footer */
+        footer { background: #8c05da; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DIGI FEST 2022</h1>
+        <nav><a href="#">Home</a><a href="#">About</a><a href="#">What's On</a><a href="#">Contact</a><a href="#">Tickets</a></nav>
+    </header>
+
+    <div class="container">
+        <section class="welcome">
+            <h2>Welcome</h2>
+            <p>Digi Fest is a celebration of digital and technology in the city of Cardiff. This year, we are celebrating 'collaboration' across this innovative city.</p>
+            <img src="image 1.png" alt="Coding" class="main-img">
+        </section>
+
+        <aside>
+            <h2>Line Up</h2>
+            <ul>
+                <li>- Introduction to HTML and CSS</li>
+                <li>- Links and images</li>
+                <li>- Page Layout</li>
+            </ul>
+            <div class="img-grid">
+                <img src="image 3.png" alt="Technology" style="width: 50%; margin-top: 10px;"><img src="image 2.png" alt="Circuitry">
+
+            </div>
+        </aside>
+    </div>
+
+    <footer>© 2022 DigiFest Ltd.</footer>
+
+</body>
+</html>
