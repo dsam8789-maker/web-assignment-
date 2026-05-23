@@ -1,0 +1,140 @@
+/* General Styling */
+:root {
+    color-scheme: dark;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e0d0b0;
+    background-color: #0b1219;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, rgba(212, 175, 55, 0.14), transparent 35%),
+                linear-gradient(180deg, #0b1219 0%, #0e1622 100%);
+    min-height: 100vh;
+}
+
+.page-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-group h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 4px;
+    line-height: 1.05;
+}
+
+.title-group p {
+    margin: 16px auto 0;
+    max-width: 720px;
+    color: #d9c696;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.section-title {
+    margin: 0 auto 28px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f3e5b5;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.image-card {
+    width: 100%;
+    max-width: 300px;
+    background: rgba(24, 34, 46, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.75);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.4);
+}
+
+.crown-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    filter: sepia(0.2) contrast(1.1) brightness(0.95);
+    transition: filter 0.4s ease;
+}
+
+.image-card:hover .crown-image {
+    filter: none;
+}
+
+figcaption {
+    padding: 18px 20px 12px;
+    text-align: left;
+}
+
+figcaption strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+figcaption span {
+    display: block;
+    color: #c8b78f;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.license {
+    margin: 0 20px 18px;
+    font-size: 0.8rem;
+    color: #8c8c8c;
+    font-style: italic;
+    text-align: left;
+}
+
+.page-footer {
+    margin-top: 42px;
+    text-align: center;
+    color: #b3a57a;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        padding: 24px 16px 40px;
+    }
+
+    .crown-image {
+        height: 300px;
+    }
+
+    .license {
+        margin-bottom: 14px;
+    }
+}
