@@ -1,0 +1,82 @@
+/* General Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    background: #002366; /* Royal Blue */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #d4af37; /* Gold */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Layout */
+.container { max-width: 800px; margin: auto; text-align: center; padding: 20px; }
+.title { font-size: 3.5rem; color: #002366; }
+.subtitle { font-style: italic; margin-bottom: 30px; color: #555; }
+
+/* Interactive Tabs */
+input[type="radio"] { display: none; }
+
+.tab-controls { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+
+.tab-btn {
+    padding: 10px 20px;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Show/Hide Logic */
+.content-section { display: none; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+
+#tab-overview:checked ~ .content-wrapper .overview-box,
+#tab-plot:checked ~ .content-wrapper .plot-box,
+#tab-characters:checked ~ .content-wrapper .char-box {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+#tab-overview:checked ~ .tab-controls label[for="tab-overview"],
+#tab-plot:checked ~ .tab-controls label[for="tab-plot"],
+#tab-characters:checked ~ .tab-characters label[for="tab-characters"] {
+    background: #d4af37;
+    color: white;
+}
+
+/* Classes & Button */
+.info-list { list-style: none; text-align: left; }
+.section-heading { color: #002366; margin-bottom: 15px; border-bottom: 2px solid #d4af37; display: inline-block; }
+
+.cta-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background: #d4af37;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.cta-button:hover { background: #b8962e; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
